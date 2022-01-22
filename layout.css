@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 2%;
+    
+}
+#mlayout{
+    
+}
+#glayout{
+    margin: 0%;
+    display: flex;
+    justify-content:space-between ;
+}
+#glayout h1{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    
+}
+#glayout div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#glayout div h1{
+    margin-top: 0%;
+    border: 4px solid black;
+    width: 115%;
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Lobster', cursive;
+    color: white;
+    background-color: red;
+
+}
+#glayout div h2{
+    margin-bottom: 0%;
+    border: 4px solid black;
+    width: 115%;
+    padding: 10%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+}
+#price1{
+    
+}
+#playout{
+    display: flex;
+    
+}
+#playout img{
+    width: 640px;
+    height: 425px;
+}
+#dlayout{
+    display: flex;
+    margin-left: 3%;
+    
+}
+#dlayout .container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 5%;
+    margin-top: -3%;
+    margin-bottom: -20%;
+    padding: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+   
+   
+}
+.box{
+    box-sizing: border-box;
+    border: 2px ;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0%;
+    text-align: center;
+    align-self: normal;
+    
+}
+.box h2{
+    margin-bottom: 0%;
+    border: 4px solid rgb(0, 0, 0);
+   
+    width: 180px;
+    height: 70px;
+    padding: 8% 1%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 1.7vw;
+    
+}
+.box h1{
+    margin-top: 0%;
+    border: 4px solid black;
+    width: 180px;
+    height: 45px;
+    
+    padding: 2% 1%;
+    font-family: 'Lobster', cursive;
+    color: white;
+    background-color: red;
+    font-size: 1.7vw;
+    box-sizing: border-box;
+    
+}
+#lowerlout .l h1{
+    margin: 0.5%;
+    text-align: center;
+    border: 2px solid black;
+}
+.lowerdetail{
+    display: flex;
+    
+}
+.mbox{
+    text-align: center;
+    margin-right: 5%;
+    align-self: normal;
+}
+.mbox h2{
+    margin-bottom: 0%;
+    border: 4px solid black;
+    
+    width: 215px;
+    height: 80px;
+    padding: 1%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-self: center;
+    
+}
+.mbox h1{
+    margin-top: 0%;
+    border: 4px solid black;
+    width: 215px;
+    height: 45px;
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Lobster', cursive;
+    font-size: 1.7vw;
+    background-color: red;
+    color: white;
+    box-sizing: border-box;
+    
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <title>layout</title>
+</head>
+
+<body>
+    <div id="message"></div>
+    <section>
+        <form action="" id="bikedetails">
+            <input type="text" name="" id="cname" placeholder="C Name">
+            <input type="text" name="" id="mname" placeholder="M name">
+            <input type="text" name="" id="price" placeholder="Price">
+            <input type="text" name="" id="engine" placeholder="engine">
+            <input type="text" name="" id="power" placeholder="Power">
+            <input type="text" name="" id="torque" placeholder="Torque">
+            <input type="text" name="" id="fueltank" placeholder="Fuel Tank">
+            <input type="text" name="" id="gearbox" placeholder="GearBox">
+            <input type="text" name="" id="braking" placeholder="Braking">
+            <input type="text" name="" id="mileage" placeholder="Mileage">
+            <input type="text" name="" id="speed" placeholder="0-100KM/H">
+            <input type="text" name="" id="height" placeholder="Height">
+            <input type="text" name="" id="compression" placeholder="Cmpression">
+            <input type="text" name="" id="clear" placeholder="G/Clearance">
+            <input type="text" name="" id="system" placeholder="Fuel System">
+            <input type="text" name="" id="suspension" placeholder="Suspension">
+            <input type="text" name="" id="transmission" placeholder="Transmission">
+            <input type="text" name="" id="pic" placeholder="photolocation">
+
+
+            <button type="submit">Show</button>
+        </form>
+    </section>
+    <div id="html-content-holder">
+        <section id="mlayout">
+            <div id="glayout">
+                
+            </div>
+            <div id="playout">
+                
+                <div id="dlayout">
+                  
+
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <section id="lowerlout">
+            
+
+        </section>
+    </div>
+    <input id="btn-Preview-Image" type="button" value="Preview" />
+    <a id="btn-Convert-Html2Image" href="#">Download</a>
+    <br />
+    <h3>Preview :</h3>
+    <div id="previewImage">
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            var element = $("#html-content-holder"); // global variable
+            var getCanvas; // global variable
+
+            $("#btn-Preview-Image").on('click', function () {
+                html2canvas(element, {
+                    onrendered: function (canvas) {
+                        $("#previewImage").append(canvas);
+                        getCanvas = canvas;
+                    }
+                });
+            });
+
+            $("#btn-Convert-Html2Image").on('click', function () {
+                var imgageData = getCanvas.toDataURL("image/png");
+                // Now browser starts downloading it instead of just showing it
+                var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+                $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
